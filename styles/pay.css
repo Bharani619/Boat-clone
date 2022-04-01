@@ -1,0 +1,222 @@
+*{
+    font-family: Montserrat;
+}
+#order-container{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top:5%;
+}
+.left_p{
+    width:25%;
+    padding:1%;
+    border-top-left-radius:5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-left-color: black;
+    height:500px;
+}
+.right_p{
+    width:40%;
+    padding: 1%;
+    border-top-right-radius: 5px;
+    height:500px;
+    overflow-y: scroll;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.option-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.back-option{
+    display: flex;
+    align-items: center;
+}
+.pay-main{
+    width:100%;
+    display:flex;
+    margin-top:3%;
+    justify-content: space-between;
+}
+.pay1{
+    display: flex;
+    gap:6%;
+    margin-left: 10%;
+}
+.pay-content{
+    margin-top:-6%;
+}
+.pay-cards{
+    margin-top:-3%;
+    color:rgba(0, 0, 0, 0.486);
+    font-size:small;
+}
+.border-down{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+}
+.right-pay-methods{
+    margin-top:5%;
+}
+.sub-content{
+    background: black;
+    color:white;
+    padding:2%;
+    border-radius: 5px;
+    margin-top:10%;
+}
+.pay-content1 p{
+    margin-top:0%;
+}
+.pay-content p{
+  margin-top: 14px;
+}
+.sub-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sub-totat2{
+    border-bottom: 2px solid grey;
+}
+.total-id{
+    font-weight: bold;
+    font-size:20px;
+}
+.lifestyle{
+    color:grey;
+    font-weight: bold;
+}
+.right1-inner{
+    color:grey;
+    font-weight: bold;
+    font-size:14px;
+}
+.side-payment-container{
+  position: fixed;
+  top:10%;
+  left:30%;
+  width:41%;
+  height:484px;
+  padding:20px 0;
+  transition: 0.3s;
+  display: none;
+}
+.side-payment-container.active{
+    right:0;
+    margin: auto;
+    background: white;
+    box-shadow:-2px 0 4px hsl ;
+    display:block
+}
+.month-cvv{
+    display: flex;
+    gap:4%;
+}
+.checkbox1{
+    display: flex;
+    align-items: center;
+    gap:0.5%;
+    letter-spacing: -1px;
+}
+.procd-btn{
+    background:#ed1c24;
+    color:white;
+    font-weight: bold;
+    width:66%;
+    padding:1%;
+    border:0;
+}
+.side1-container{
+    width:80%;
+    margin:auto;
+}
+#cardnumber{
+    padding:1.5%;
+    width:300px;
+}
+#expiry{
+    padding:2%;
+    width:140px;
+}
+#expiry-cvv{
+    width:150px;
+    padding:2%;
+}
+#holder{
+    width:300px;
+    padding: 1.5%;;
+}
+form input{
+    border:1px solid rgba(128, 128, 128, 0.41);
+    border-radius: 5px;
+}
+.side-wallet-container{
+    position: fixed;
+    top:10%;
+    left:30%;
+    width:41%;
+    height:484px;
+    padding:20px 0;
+    transition: 0.3s;
+    display: none;
+}
+.side-wallet-container.active{
+    right:0;
+    margin: auto;
+    background: white;
+    box-shadow:-2px 0 4px hsl ;
+    display:block
+}
+.wallet{
+    width:50%;
+    margin-left:10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.border-down1{
+    width:80%;
+    border-bottom:1px solid rgba(0, 0, 0, 0.234);
+}
+.side-net-container{
+    position: fixed;
+    top:10%;
+    left:30%;
+    width:41%;
+    height:484px;
+    padding:20px 0;
+    transition: 0.3s;
+    display: none;
+}
+.side-net-container.active{
+    right:0;
+    margin: auto;
+    background: white;
+    box-shadow:-2px 0 4px hsl ;
+    display:block
+}
+.side-UPI-container{
+    position: fixed;
+    top:10%;
+    left:30%;
+    width:41%;
+    height:484px;
+    padding:20px 0;
+    transition: 0.3s;
+    display: none;
+}
+.side-UPI-container.active{
+    right:0;
+    margin: auto;
+    background: white;
+    box-shadow:-2px 0 4px hsl ;
+    display:block
+}
+.backtopayment{
+    cursor: pointer;
+}

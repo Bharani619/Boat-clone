@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+    <div id="container_c">
+        <div id="left_c">
+            <div class="logo"><a href="index.html"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_2.png?95495"></a></div>
+            <div><p class="p_c">Get extra 20% cashback using pay with rewards.</p></div>
+            <div class="page-navigation">
+                   <div class="navigation-icon">
+                      <div onclick="window.location.href='index.html'">
+                        <p>Cart</p>
+                      </div>
+                      <span class="right_2 right-icon "><i class="fas fa-angle-right"></i></span>
+                   </div>
+                   <div  class="navigation-icon">
+                    <div>
+                        <p>Information</p>
+                    </div>
+                    <span class="right-icon"> <i class="fas fa-angle-right"></i></span>
+                   </div>
+                   <div  class="navigation-icon" onclick="window.location.href='payment.html'">
+                      <div class="payment">
+                        <p>Payment</p>
+                      </div>
+                   </div>
+            </div>
+            <div class="flex2_c">
+        
+                <div class="login-con">
+                    <span class="contact_c"><i class="fas fa-user"></i></span>
+                    <p class="p3_c"></p>
+                    <p  class="p4_c"></p>
+                </div>
+
+                <div class="login-signup" onclick="window.location.href='login.html'">
+                    <p>LOGIN/SIGNUP</p>
+                </div>
+            </div>
+            <div><p class="p_c1">DELIVERY ADDRESS</p></div>
+            <form>
+                    <input type="email" placeholder="Email*" id="email"><br>
+                    <select class="select1_c">
+                        <p>Country/region</p>
+                        <option value="India" >India</option>
+                    </select>
+                    <br>
+                        <input class="f_name"type="text" placeholder="First name"/> 
+                        <input class="l_name" type="text" placeholder="Last name"/>  <br></br>
+                        <input class="address" type="text" placeholder="Address"/>  <br></br>
+                        <input class="address_2" type="text" placeholder="Apartment, suite, etc (optional)"/>
+                        <input class="city_i" type="text" placeholder="City"/>
+                        <!-- <input class="input2_c" type="text" placeholder="State">  -->
+                        <select class="select_c">
+                            <!-- <option value=""></option> -->
+                            <option value="">State</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandighar">Chandighar</option>
+                            <option value="Chhattisghah">Chhattisghah</option>
+                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Delhi"> Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="himachal Pardesh">himachal Pardesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Pondicherry">Pondicherry</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
+                        <input class="input2_c" type="text" placeholder="PIN code"/> <br> </br>
+                        <input class="input4_c" type="text" placeholder="Phone"/>  <br></br>
+            </form>
+             <div id="container2_c">
+                <div><button class="button_c" onclick="retriveData()">Continue to payment</button></div>
+             </div>
+
+             <div class="payment-method">
+                 <div class="choose-pay">
+                     <p>CHOOSE PAYMENT METHOD</p>
+                 </div>
+                 <div class="pay-options">
+                     <div class="pay1">
+                         <div class="radio-tag">
+                             <input type="radio" id="radio-type">
+                         </div>
+                         <div class="method-name">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/payu1.png?v=1633523127" alt="">
+                         </div>
+                     </div>
+                     <div class="pay2">
+                           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_460x.png?v=1632725578" alt="">
+                     </div>
+                 </div>
+                 <div class="pay-options">
+                    <div class="pay1">
+                        <div class="radio-tag">
+                            <input type="radio" id="radio-type">
+                        </div>
+                        <div class="razor method-name">
+                           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/razorpay1.png?v=1633523849" alt="">
+                        </div>
+                    </div>
+                    <div class="pay2">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_460x.png?v=1632725578" alt="">
+                    </div>
+                 </div>
+                 <div class="pay-options">
+                    <div class="pay1">
+                        <div class="radio-tag">
+                            <input type="radio" id="radio-type">
+                        </div>
+                        <div class="method-name">
+                           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/paytm1.png?v=1633523849" alt="">
+                        </div>
+                    </div>
+                    <div class="pay2">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_460x.png?v=1632725578" alt="">
+                    </div>
+                 </div>
+                 <div class="order-btn">
+                     <button class="place-btn">PLACE ORDER</button>
+                 </div>
+             </div>
+
+             <div class="border-end">
+                 <div class="border-line"></div>
+                 <div class="end-tag">
+                    <div class="end-flex">
+                        <p>Refund policy</p>
+                    </div>
+                    <div class="end-flex">
+                        <p>Privacy policy</p>
+                    </div>
+                    <div class="end-flex">
+                        <p>Terms of service</p>
+                    </div>
+                 </div>
+             </div>
+        
+        </div>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>right side>>>>>>>>>>>>>>>>>>> -->
+        <div id="right_c">
+              <div class="cart-container">
+
+                 <div class="cart-product">
+
+                 </div>
+
+              </div>
+                
+              <div class="gift-container">
+                  <div class="gift-opt">
+                      <p>Gifting | Steps: Opt for Gift Box?</p>
+                  </div>
+                  <div class="git-card">
+                     <div class="gift-image">
+                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Gif-box_2.jpg?v=1640612392" alt="">
+                     </div>
+                     <div class="gift-content">
+                         <div class="gift-content-1">
+                             <h4>GiftBox</h4>
+                             <p>Rs 299.00</p>
+                             <div class="gift-flex">
+                                <div class="giftid">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="gift-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="git-con">
+                                    <p>Add Gift Box</p>
+                                </div>
+
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+              </div>
+
+              <div class="redeem-card">
+                  <div class="border-up"></div>
+                  <div class="redeem-content">
+                      <div class="input-redeem">
+                          <input type="checkbox">
+                      </div>
+                      <div class="redeem-opt">
+                          <h4>Redeem Gift Card?</h4>
+                      </div>
+                  </div>
+                  <div class="border-down"></div>
+              </div>
+
+                <div class="totals">
+                    <div class="subtotal_c">
+                        <div>Subtotal</div>
+                        <div id="total">0</div></div>
+    
+                    <div id="shiping_c">
+                        <div>Shipping</div>
+                        <div class="ships">Free</div>
+                    </div>
+                </div>
+
+                <div id="totl_inr_c" >
+                    <div class="total_c">Total</div>
+                    <div id="total1"></div>
+                </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+
+let data = JSON.parse(localStorage.getItem("cart"));
+// let shipdata = JSON.parse(localStorage.getItem("shippingData"))||[];
+var log_user=JSON.parse(localStorage.getItem("name"))
+var email=JSON.parse(localStorage.getItem("email"))
+
+console.log(log_user,email)
+
+var flx=document.querySelector(".p3_c")
+var flx1=document.querySelector(".p4_c")
+
+if(log_user===null || email===null){
+    flx.innerHTML=`Already have an account?`
+}
+else{
+
+flx.innerHTML=log_user
+flx1.innerHTML='('+email+')'
+
+}
+
+
+flx1.style.marginLeft='1px';
+flx1.style.marginTop='0px';
+flx.style.marginTop='0px';
+flx.style.marginLeft='10px';
+
+
+let total2=JSON.parse(localStorage.getItem('total'));
+console.log(total2);
+let price1=document.getElementById('total');
+price1.textContent=total2;
+
+let totalAmout=document.getElementById('total1');
+totalAmout.style.marginTop='20px';
+totalAmout.innerHTML=`INR ${total2}`;
+
+
+
+function getData(data){
+    console.log(data);
+
+    parent.innerHTML=''
+
+   data.forEach((el) => {
+
+
+    function randomInt(min,max){
+
+        return Math.floor(Math.random()*(max-min)+min);
+    }
+    
+    let result = randomInt(30,70);
+
+    let div = document.createElement("div");
+    div.setAttribute("class","checkoutDiv");
+
+    let cardDiv = document.createElement("div");
+    cardDiv.setAttribute("class","cardDiv");
+
+    let nameDiv = document.createElement("div");
+    nameDiv.setAttribute("class","nameDiv");
+
+    let amount = document.createElement("div");
+    amount.setAttribute("class","totalDiv");
+
+    let totalAmt = document.createElement("div");
+    totalAmt.setAttribute("class","totalamount");
+
+    let Image = document.createElement("img");
+    Image.src=el.image;
+
+    let name = document.createElement("p");
+    name.textContent=el.description;
+
+    let Price = document.createElement("P");
+    Price.textContent=`₹${el.price}`;
+
+    let offer = document.createElement("p");
+    offer.textContent=`${result}% Off`;
+
+    // let strikedOff = document.createElement("p");
+    // strikedOff.textContent=el.striked;
+
+    cardDiv.append(Image);
+    nameDiv.append(name);
+    amount.append(Price);
+    totalAmt.append(amount,offer);
+    div.append(cardDiv,nameDiv,totalAmt);
+    document.querySelector(".cart-product").append(div);
+   })
+
+
+}
+
+getData(data);
+
+
+
+function retriveData(){
+
+  let email = document.querySelector("#email").value;
+  let country = document.querySelector(".select1_c").value;
+  let fname = document.querySelector(".f_name").value;
+  let lname = document.querySelector(".l_name").value;
+  let address = document.querySelector(".address").value;
+  let address2 = document.querySelector(".address_2").value;
+  let City = document.querySelector(".city_i").value;
+  let state = document.querySelector(".select_c").value;
+  let pincode = document.querySelector(".input2_c").value;
+  let phone = document.querySelector(".input4_c").value;
+
+  if(email==""||country==""||fname==""||lname==""||address==""||address2==""||City==""||state==""||pincode==""||phone==""){
+
+     alert("Fill the Information for go to next page")
+
+  }
+  else{
+
+     const userDetails = {
+
+        Email:email,
+        Country:country,
+        Fname:fname,
+        Lname:lname,
+        userAddress:address,
+        userAddress2:address2,
+        city:City,
+        State:state,
+        Pincode:pincode,
+        Phone:phone
+     }
+     localStorage.setItem("shippingData",JSON.stringify(userDetails));
+     window.location.href="payment.html"
+  }
+
+}
+
+
+</script>
+

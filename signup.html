@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/footer.css"/>
+    <link rel="stylesheet" href="styles/nav.css"/>
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="styles/cart.css"/>
+    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="Home-container">
+    <nav>
+        <div id="nav-bar"></div>
+    </nav>
+    <section class="signup-form">
+        <div class="signup-head">Create Account</div>
+        <div class="signup-icons">
+           <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=1896981220538415&kid_directed_site=0&app_id=1896981220538415&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv3.2%2Fdialog%2Foauth%3Fclient_id%3D1896981220538415%26state%3D34fd800f5ed8b89f39c53baa602848fd%26response_type%3Dcode%26sdk%3Dphp-sdk-5.4.4%26redirect_uri%3Dhttps%253A%252F%252Fsocial-login.oxiapps.com%252Fauth%252Ffacebook%26scope%3Demail%26display%3Dpopup%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Ddaa01595-0c52-45c4-b076-0a033016e4c1%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fsocial-login.oxiapps.com%2Fauth%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D34fd800f5ed8b89f39c53baa602848fd%23_%3D_&display=popup&locale=en_GB&pl_dbl=0" class="facebook"> <i class="fab fa-facebook"></i></a>
+           <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?response_type=code&redirect_uri=https%3A%2F%2Fsocial-login.oxiapps.com%2Fauth%2Fgoogle&client_id=898543883992-ut65aoh5alu6s7jlcs5hk05htbagjs9n.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=online&approval_prompt=auto&flowName=GeneralOAuthFlow" class="google"> <i class="fa fa-google"></i></a>
+        </div>
+        <form action="" id="form">
+               <p>First Name</p>
+               <input type="text" id="name">
+               <p>Last Name</p>
+               <input type="text" id="lastname">
+               <p>Email</p>
+               <input type="email" id="Email">
+               <p>Password</p>
+               <input type="password" id="pass"><br>
+               <input type="submit" value="create">   
+               <div class="login-details">Log in with an existing account or Return to store</div>       
+        </form>
+    </section>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+</div>
+
+    <section class="sidebar-main">
+        <div class="sibebar-container">
+            <div class="sidebar-head">
+                <p>Free shipping | COD available on orders above $3000</p>
+            </div>
+            <div class="side-btn-content">
+                <div class="side-btn">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                
+                <div class="cart-count"></div>
+            </div>
+            <div class="sidebar-prod-container">
+                     
+            </div>
+            <div class="divide-line"></div>
+            <div class="lower-container">
+                 <div class="promo-tag">
+                     <h4>PROMO CODE</h4>
+                 </div>
+                 <div class="promo-content">
+                     <input type="text" placeholder="Enter Coupon Code" id="promoInput"> 
+                     <button class="apply-btn">Apply</button>
+                 </div>
+                 <div class="subtotal">
+                     <p>Subtotal:</p>
+                     <p class="total-price"></p>
+                 </div>
+                 <div class="shipping-cart">
+                    <p>Shipping:</p>
+                    <p>FREE</p>
+                </div>
+                <div class="block-line">
+                    <p>Or 30 interest-free payment 0f $4165 with<span><img src="https://assets.zestmoney.in/assets/widget/zest-logo-name-info.svg" alt=""></span></p>
+                </div>
+                <div class="cart-payment">
+                    <div class="btn-upi">
+                        <button onclick="window.location.href='checkout.html'">Pay Via UPI</button>
+                    </div>
+                    <div class="btn-card">
+                        <button onclick="window.location.href='checkout.html'">Pay Via Card</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
+<script src="scripts/signup.js"></script>
+<script type="module">
+
+ import navbar from "./components/nav.js";
+
+ import footer from "./components/footer.js";
+
+ import {retriveData,appendData} from "./scripts/cart.js";
+
+ let parent1 = document.querySelector(".sidebar-prod-container");
+
+ let Nav = document.querySelector("#nav-bar");
+ Nav.innerHTML=navbar();
+
+ let Footer = document.querySelector("#footer");
+ Footer.innerHTML=footer();
+
+ let data = retriveData(JSON.parse(localStorage.getItem("cart")));
+
+appendData(data,parent1);
+
+let cart_btn = document.querySelector(".nav-cart-btn");
+let cart = document.querySelector(".sidebar-main");
+let cart_back = document.querySelector(".side-btn");
+let Homecontainer = document.querySelector("#Home-container");
+
+    
+cart_btn.onclick = ()=> {
+    Homecontainer.setAttribute("class","activeOnblur")
+    cart.classList.add("active");
+}
+ 
+cart_back.onclick =()=> {
+    Homecontainer.setAttribute("class","activeofblur")
+    cart.classList.remove("active");
+}
+
+let product = JSON.parse(localStorage.getItem("Allproducts"));
+
+
+let value = document.getElementById("searchInput");
+value.addEventListener('keypress',searchFunction);
+
+function searchFunction (event) {
+
+if(event.key=="Enter"){
+  
+  let searchvalue = document.getElementById("searchInput").value;
+  
+  let  searchArr = [];
+
+  for(let i=0; i<product.length; i++){
+      if(searchvalue===product[i].category){
+         searchArr.push(product[i]);
+      }
+  }
+  localStorage.setItem("search",JSON.stringify(searchArr));
+  setTimeout(()=> {
+      window.location.href="search.html"
+  },1000)
+  
+}
+
+}
+</script>

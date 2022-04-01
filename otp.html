@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        font-family:Montserrat;
+    }
+    #container{
+        width:300px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        margin:auto;
+        margin-top:5%;
+    }
+    input[type="submit"]{
+        border:0px;
+        color:white;
+        border-radius:20px;
+        padding:5px;
+        margin:10px;
+        background-color:#dc2f02;
+        width:70px;
+    }
+    p{
+        font-size:14px;
+    }
+    #container>h4,h5,p,form{
+        padding:10px;
+    }
+    h4,.p-tag{
+        color:#6c757d;
+    }
+    </style>
+</head>
+<body>
+   
+    <div id="container">
+        <h4>Verify Account</h4>
+        <h5>Mobile verification has <br>successfully done</h5>
+        <p class='p-tag'>We have send the OTP on the registered mobile number</p>
+        <form>
+            <p>Enter OTP </p>
+            <input id='otp' type='number'/>
+            <br>
+            <input type='submit' value='Verify'/>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", otpCheck);
+   
+    function otpCheck(event) {
+        event.preventDefault();
+
+        let otp = document.querySelector("#otp").value;
+
+        if(otp !=1234) {
+          
+            alert("wrong otp")
+        }
+        else {
+            
+           setTimeout(()=> {
+                alert(`OTP VERIFIED`)
+            },1000);
+
+
+            setTimeout(()=>{
+                 alert(`YOUR ORDER HAS PLACED SUCCESSFULLY,THANKS FOR PURCHASING`)
+                 window.location.href="index.html";
+            },5000);
+
+            
+        } 
+    }
+ 
+</script>

@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+.ImgCard img{
+    width:100%;
+}
+.mainCard{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    gap:3%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+}
+.priceDiv{
+    display: flex;
+}
+.ImgCard{
+    width:30%;
+}
+.contentCard{
+    width:50%;
+    height:100%;
+}
+.deleteCard{
+    width:10%;
+}
+.sidebar-prod-container{
+    height:300px;
+    overflow-y: scroll;
+}
+.sidebar-prod-container::-webkit-scrollbar{
+    display: none;
+}
+.subtotal{
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+}
+.shipping-cart{
+    display: flex;
+    margin-top:-7%;
+    font-weight: bold;
+    justify-content: space-between;
+}
+.cart-payment{
+    display: flex;
+}
+.divide-line{
+    border-top:4px solid silver; 
+}
+.sidebar-head{
+    margin-top:-11%;
+    background:#ed1c24;
+    color:white;
+    padding:0.1px;
+}
+.side-btn-content{
+    background:black;
+    padding:5px;
+    color:white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.promo-content input{
+    border:none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+.promo-content button{
+    border:2px solid black;
+    background: white;
+    border-radius: 20px;
+    padding:1.5%;
+    width:100px;
+    font-weight: bold;
+}
+.promo-content button:hover{ 
+    background: #ed1c24;
+    border:0;
+    color:white;
+    transition: 0.5s;
+}
+.block-line{
+    background: #dbecff;
+}
+.block-line p{
+    padding:1.2%;
+}
+/* .block-line span>img{
+   margin-bottom:1%;
+} */
+
+.btn-upi button{
+    width:120px;
+    padding:11%;
+    border-radius: 25px;
+    border:0;
+    background: #ed1c24;
+    color:white;
+    font-weight: bold;
+}
+.btn-card button{
+    width:120px;
+    padding:10%;
+    border-radius: 25px;
+    border:2px solid #ed1c24;
+    background: white;
+    color:#ed1c24;
+    font-weight: bold;
+}
+.btn-upi button:hover{
+    background:white;
+    color:#ed1c24;
+    border:2px solid #ed1c24;
+    padding:10%;
+}
+.btn-card button:hover{
+    background: #ed1c24;
+    color:white;
+}
+.btn-card{
+    margin-left:18%;
+}
+.promo-tag,.promo-content,.subtotal,.shipping-cart,.cart-payment{
+    margin-left:3%;
+}
+.cart-back{
+    color:white;
+}
+.sidebar-main{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:350px;
+    height: 100%;
+    padding:20px 0;
+    box-shadow: -2px 0 4px hsl;
+    background: white;
+    color:black;
+    transition:0.3s;
+}
+.sidebar-main.active{
+    right:0;
+}
+.side-btn{
+    position: absolute;
+    left:0;
+    cursor: pointer;
+}
+.cart-count{
+    margin-left:5%;
+}
+.activeOnblur{
+    filter:blur(5px);
+}
+.activeofblur{
+    filter:blur(0px);
+}
+.count-icon1{
+    color:red;
+    font-weight: bolder;
+    font-size:20px;
+    border:1px solid white;
+    border-radius:100%;
+    background: black;
+}
+.count-icon{
+    margin-top:-15%;
+    margin-left:-20%;
+    text-align:center;
+}

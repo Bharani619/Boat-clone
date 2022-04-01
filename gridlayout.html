@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        font-family: Josefin sans;
+    }
+    body{
+        height:100%;
+        margin:0;
+        padding:0;
+        font-family: Josefin Sans;
+        background-color:black;
+    }
+      #Ambassador-container{
+          position: absolute;
+          top:0;
+          width:100%;
+          display: grid;
+          grid-template-columns:repeat(12,1fr);
+          grid-template-rows: 400px 200px;
+          grid-template-areas: 
+          "a a a a a a b b b b b b"
+          "c c c c c c d d d e e e"
+          ;
+      }
+      #Ambassador-container img{
+          width:100%;
+      }
+      .celeb-1{
+          grid-area: a;
+      }
+      .celeb-2{
+          grid-area: b;
+      }
+      .celeb-3{
+          grid-area: c;
+          margin-top:1.1%;
+      }
+      .celeb-4{
+          grid-area: d;
+          margin-top:-20%;
+      }
+      .celeb-5{
+          grid-area: e;
+          margin-top:-20%;
+      }
+      .content{
+          color:white;
+          position:relative;
+          transform: translate(-50%,600%);
+          top:50%;
+          left:50%;
+          z-index: 5;
+          font-size:30px;
+          text-align: center;
+      }
+      .content-1{
+          color:white;
+          position:relative;
+          transform: translate(-50%,350%);
+          top:50%;
+          left:50%;
+          z-index: 5;
+          font-size:30px;
+          text-align: center;
+      }
+      .content-2{
+          color:white;
+          position:relative;
+          transform: translate(-50%,900%);
+          top:50%;
+          left:50%;
+          z-index:1;
+          font-size:30px;
+          text-align: center;
+      }
+      .content-3{
+          color:white;
+          position:relative;
+          transform: translate(-50%,1000%);
+          top:50%;
+          left:50%;
+          z-index: 5;
+          font-size:30px;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+   <div id="Ambassador-container">
+       <div class="celeb-1">
+        <div class="content">
+            <p>Sports</p>
+        </div>
+           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Sports_900x.jpg?v=1605624529" alt="">
+       </div>
+       <div class="celeb-2">
+        <div class="content-1">
+            <p>Fashion</p>
+        </div>
+           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fashion_900x.jpg?v=1605624529" alt="">
+       </div>
+       <div class="celeb-3">
+        <div class="content-2">
+            <p>Travel</p>
+        </div>
+           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Travel_900x.jpg?v=1605624529" alt="">
+       </div>
+       <div class="celeb-4">
+        <div class="content-3">
+            <p>All Time Favourites</p>
+        </div>
+           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Affordable_cbbe72cb-075e-425a-8582-483a849ab8d6_460x.jpg?v=1640170618" alt="">
+       </div>
+       <div class="celeb-5">
+        <div class="content-3">
+            <p>WFH</p>
+        </div>
+           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/WFH_460x.jpg?v=1605624529" alt="">
+       </div>
+   </div>
+</body>
+</html>

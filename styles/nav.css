@@ -1,0 +1,151 @@
+/* body{
+    margin:0;
+} */
+#nav-1{
+    text-align: center;
+    width:100%;
+    background-color: red;
+    margin:0 auto 0;
+    padding: 0.1%;
+    position: relative;
+    height:30px;
+}
+#nav-1 p{
+    margin-top:0.5%;
+    color:white;
+}
+#nav-1 p a{
+    color:white;
+}
+#nav-2{
+    display: flex;
+    background: black;
+    justify-content: space-around;
+    color:white;
+    height: 100%;
+    width:100%;
+    padding:0.5%;
+}
+#nav-2 li p{
+    margin:0;
+    padding:0;
+    position: relative;
+    list-style: none;
+}
+#nav-2 ul{
+    list-style: none;
+}
+.menu-content-1 img{
+    margin-top:2%;
+    width:50%;
+    background: black;
+    cursor: pointer;
+}
+.menu-content-2{
+    display: flex;
+    align-items: center;
+    width:30%;
+    gap:5%;
+    margin-left:5%;
+    font-size:20px;
+}
+
+.menu-content-2 li p:hover{
+    background-color: black;
+    color:white;
+}
+.menu-sub{
+    position: absolute;
+    left:0;
+    width:100%;
+    display: none;
+    background: black;
+}
+.menu-items{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    padding:1%;
+}
+.menu-content-2 img{
+    width:100%;
+}
+
+#nav-2 li:hover .menu-sub{
+    display: block;
+}
+.menu-sub li{
+    display: block;
+}
+.menu-sub-1{
+    position: absolute;
+    width:15%;
+    display: none;
+    background: black;
+    padding: 1%;
+}
+#nav-2 li:hover .menu-sub-1{
+    display: block;
+}
+.menu-sub-1 li{
+    display: block;
+}
+.menu-items-1 a{
+    color:white;
+    text-decoration: none;
+    font-size:medium;
+}
+.menu-items-1 a:hover{
+    color:red;
+}
+.menu-items-1 li{
+    margin-bottom:3%;
+}
+.menu-content-3{
+    width:30%;
+    display: flex;
+    align-items: center;
+    gap:20%;
+}
+.menu-content-3 input{
+    border:0;
+    outline: none;
+    padding:10px;
+    border-radius:20px;
+    width:250px;
+}
+.usercontent{
+   width:100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.usercontent a{
+    color:white;
+    margin-left:5%;
+    font-size:25px;
+}
+.usercontent button{
+    border:0;
+    background: black;
+    color:white;
+    font-size:25px;
+    cursor: pointer;
+}
+.icon{
+    margin-top:1%;
+    color:rgba(255, 255, 255, 0.329);
+    font-size:18px;
+    margin-left:20px;
+
+}
+.third-p{
+    margin-left:-20%;
+}
+.swiper-button-next{
+    color:red;
+}
+.swiper-button-prev{
+    color:red;
+    font-weight: bold;
+
+}

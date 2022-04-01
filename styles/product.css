@@ -1,0 +1,186 @@
+.coverImage img{
+    width:100%;
+}
+*{
+    box-sizing: border-box;
+    font-family: Montserrat;
+    
+}
+  body{
+      margin:0;
+      padding:0;
+      color:white;
+      background: black;
+  }
+  .title-bar{
+      font-size:20px;
+  }
+  .title-bar span:hover{
+      cursor: pointer;
+      color:grey;   
+  }
+  .page-header{
+      margin-top:-2%;
+      font-size: 30px;
+  }
+  .productContainer{  
+      width:90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap:1%;
+      height:100%;
+      margin-bottom:5%;   
+  }
+  #sort-buttons{
+      text-align:end;
+      margin-right:5%;
+  }
+  .sort-flex{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap:1%;
+  }
+  .sort-head{
+      margin-top:0.3%;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.424);
+  }
+  #sort-lh-sort-hl{
+      background: black;
+      border:0;
+      outline: none;
+      color:rgba(255, 255, 255, 0.657);
+      width:100px;
+  }
+  .imgDiv img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height:250px;
+    object-fit: contain;
+    background-color: #c4c4c4;
+}
+.contentDiv{
+    margin-left:3%;
+    height:50%;    
+}
+.mainDiv{
+    border-radius: 10px;
+    width:100%;
+    height:100%;
+    background: white;
+    color:black;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.page-content{
+   width:30%;
+   margin-left:5%; 
+}
+
+.prod-blog-div{
+    display: flex;
+    justify-content: center;
+    gap:1%;
+}
+.cardImg img{
+    width:100%;
+}
+.product-blog{
+    width:75%;
+    margin:auto;
+}
+.cardcontent{
+    margin-top:-6.5%;
+    background:#25272c;
+}
+.cardcontent p{
+    font-size: 20px;
+}
+.cardcontent p,.card-btn{
+    margin-left:2%;
+    padding:2%;
+}
+.card-btn button{
+background: #25272c;
+border:1px solid red;
+border-radius:5px;
+padding:1.5%;
+color:rgba(255, 255, 255, 0.733);
+}
+.highDiv{
+    margin-top:-3%;
+    display: flex;
+    align-items: center;
+    gap:1%;
+}
+.highDiv>.icons{
+    color:#ed1c24;
+    font-size: 5px;
+}
+.highDiv p{
+    font-size:15px;
+    color:#363636d5;
+    line-height:0px;
+}
+.priceDiv{
+    color:#ed1c24;
+    font-weight: bold;
+    margin-top:-2%;
+}
+.titleDiv{
+    font-weight: bold;
+    margin-top: 1px;
+}
+.ratingDiv{
+    margin-top:2.5%;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color:#ed1c24;
+    gap:1%;
+}
+.cartBtn{
+    border:0;
+    background: black;
+    color:white;
+    width:150px;
+    padding:2.5%;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top:2.5%;
+    margin-bottom:2.5%;
+}
+.color{
+    color:red;
+    border:3px solid #ed1c24;
+    border-radius: 100%;
+    padding:0.1%;
+}
+.colorDiv{
+    display: flex;
+    align-items: center;
+    gap:2%;
+    margin-top:5%;
+}
+.color1{
+    color:limegreen;
+    border-radius: 100%;
+    padding:0.1%;
+}
+.color2{
+    color:steelblue;
+    border-radius: 100%;
+    padding:0.1%;
+}
+.costDiv{
+   display: flex;
+   align-items: center;
+   gap:3.5%;
+}
+.striked{
+    margin-top:-2.5%;
+    text-decoration: line-through;
+    color:grey;
+    font-size:14px;
+}

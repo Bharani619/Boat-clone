@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: Montserrat;
+        }
+     .info{
+         color:grey;
+     }
+     .payment{
+         color:black;
+     }
+     .user-container{
+         width:80%;
+         padding:1%;
+         background: #f0f0f0;   
+     }
+     .userdetails{
+         filter:opacity(0.5)
+     }
+     .payment-method{
+         background: white;
+         filter:opacity(1);
+     }
+     .names-container{
+         width:100%;
+         display: flex;
+         justify-content: space-between;
+     }
+     .email3{
+         margin-bottom:-2%;
+     }
+     .email{
+         border-bottom: 1px solid rgba(0, 0, 0, 0.333);
+     }
+     .fname2{
+         width:48%;
+     }
+     .lname2{
+         width:48%;
+     }
+     .fname{
+         margin-top:-3%;
+         border-bottom: 1px solid black;
+     }
+     .lname{
+         margin-top:-3%;
+         border-bottom: 1px solid black;
+     }
+     .address-container{
+         width:100%;
+         display: flex;
+         justify-content: space-between;
+     }
+     .address3{
+         width:48%;
+     }
+     .address2-2{
+         width:48%
+     }
+     .address1,.address2{
+         margin-top:-3%;
+         border-bottom: 1px solid black;
+     }
+     .city-phone{
+         display: flex;
+         justify-content: space-between;
+         width:100%;
+     }
+     .city2{
+         width:48%;
+     }
+     .phone2{
+         width:48%;
+     }
+     .city,.phone{
+         border-bottom: 1px solid black;
+         margin-top:-3%;
+     }   
+     .state-pin-country{
+         display: flex;
+         justify-content: space-between;
+         width:100%;
+     }
+     .country1{
+         width:30%;
+     }
+     .state1{
+         width:30%;
+     }
+     .pincode1{
+         width: 30%;
+     }
+     .country,.state,.pincode{
+         margin-top:-3%;
+         border-bottom: 1px solid black;
+     }
+     .address-head{
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+         justify-content: space-between;
+     }
+    </style>
+
+</head>
+<body>
+    <div id="container_c">
+        <div id="left_c">
+            <div class="logo"><a href="index.html"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_2.png?95495"></a></div>
+            <div><p class="p_c">Get extra 20% cashback using pay with rewards.</p></div>
+            <div class="page-navigation">
+                   <div class="navigation-icon">
+                      <div onclick="window.location.href='index.html'">
+                        <p>Cart</p>
+                      </div>
+                      <span class="right_2 right-icon "><i class="fas fa-angle-right"></i></span>
+                   </div>
+                   <div  class="navigation-icon" onclick="window.location.href='checkout.html'">
+                    <div class="info">
+                        <p>Information</p>
+                    </div>
+                    <span class="right-icon"> <i class="fas fa-angle-right"></i></span>
+                   </div>
+                   <div  class="navigation-icon">
+                      <div class="payment">
+                        <p>Payment</p>
+                      </div>
+                   </div>
+            </div>
+            
+
+            <div class="user-container">
+               
+              <form action="">
+               <div class='address-head'>
+                   <div class="delivery"><h4>DELIVERY ADDRESS</h4></div>
+                   <div class="change" onclick="window.location.href='checkout.html'"><p>Change</p></div>
+               </div>
+               <div class="userdetails">
+                  <div class="email1">
+                      <div class="email2">
+                          <p class="email3">Email*</p>
+                          <p class="email"></p>
+                      </div>
+                  </div>
+                  <div class="names-container">
+                      <div class="fname2">
+                          <p class="fname1">Firstname*</p>
+                          <p class="fname"></p>
+                      </div>
+                      <div class="lname2">
+                          <p class="lname1">Lastname*</p>
+                          <p class="lname"></p>
+                      </div>
+                  </div>
+                 <div class="address-container">
+                    <div class="address3">
+                        <p class="address-2">Address*</p>
+                        <p class="address1"></p>
+                    </div>
+                    <div class="address2-2">
+                        <p class="address2-1">Apartment,suite,etc,(optional)*</p>
+                        <p class="address2"></p>
+                    </div>
+                 </div>
+                  <div class="city-phone">
+                      <div class="city2">
+                          <p class="city1">city*</p>
+                          <p class="city"></p>
+                      </div>
+                      <div class="phone2">
+                          <p class="phone1">Phone*</p>
+                          <p class="phone"></p>
+                      </div>
+                  </div>
+                  <div class="state-pin-country">
+                      <div class="country1">
+                          <p>Country*</p>
+                          <p class="country"></p>
+                      </div>
+                      <div class="state1">
+                          <p>state*</p>
+                          <p class="state"></p>
+                      </div>
+                      <div class="pincode1">
+                          <p>pincode*</p>
+                          <p class="pincode"></p>
+                      </div>
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+
+
+             <div class="payment-method">
+                 <div class="choose-pay">
+                     <p>CHOOSE PAYMENT METHOD</p>
+                 </div>
+                 <div class="pay-options">
+                     <div class="pay1">
+                         <div class="radio-tag">
+                             <input type="radio" id="radio-type">
+                         </div>
+                         <div class="method-name">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/payu1.png?v=1633523127" alt="">
+                         </div>
+                     </div>
+                     <div class="pay2">
+                           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_460x.png?v=1632725578" alt="">
+                     </div>
+                 </div>
+                 <div class="pay-options">
+                    <div class="pay1">
+                        <div class="radio-tag">
+                            <input type="radio" id="radio-type">
+                        </div>
+                        <div class="razor method-name">
+                           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/razorpay1.png?v=1633523849" alt="">
+                        </div>
+                    </div>
+                    <div class="pay2">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_460x.png?v=1632725578" alt="">
+                    </div>
+                 </div>
+                 <div class="pay-options">
+                    <div class="pay1">
+                        <div class="radio-tag">
+                            <input type="radio" id="radio-type">
+                        </div>
+                        <div class="method-name">
+                           <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/paytm1.png?v=1633523849" alt="">
+                        </div>
+                    </div>
+                    <div class="pay2">
+                          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_460x.png?v=1632725578" alt="">
+                    </div>
+                 </div>
+                 <div class="order-btn">
+                     <button class="place-btn" onclick="window.location.href='pay.html'">PLACE ORDER</button>
+                 </div>
+             </div>
+
+             <div class="border-end">
+                 <div class="border-line"></div>
+                 <div class="end-tag">
+                    <div class="end-flex">
+                        <p>Refund policy</p>
+                    </div>
+                    <div class="end-flex">
+                        <p>Privacy policy</p>
+                    </div>
+                    <div class="end-flex">
+                        <p>Terms of service</p>
+                    </div>
+                 </div>
+             </div>
+        
+        </div>
+            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>right side>>>>>>>>>>>>>>>>>>> -->
+        <div id="right_c">
+              <div class="cart-container">
+
+                 <div class="cart-product">
+
+                 </div>
+
+              </div>
+
+              <div class="gift-container">
+                <div class="gift-opt">
+                    <p>Gifting | Steps: Opt for Gift Box?</p>
+                </div>
+                <div class="git-card">
+                   <div class="gift-image">
+                       <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Gif-box_2.jpg?v=1640612392" alt="">
+                   </div>
+                   <div class="gift-content">
+                       <div class="gift-content-1">
+                           <h4>GiftBox</h4>
+                           <p>Rs 299.00</p>
+                           <div class="gift-flex">
+                              <div class="giftid">
+                                  <input type="checkbox">
+                              </div>
+                              <div class="gift-icon">
+                                  <i class="fas fa-gift"></i>
+                              </div>
+                              <div class="git-con">
+                                  <p>Add Gift Box</p>
+                              </div>
+
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+
+            <div class="redeem-card">
+                <div class="border-up"></div>
+                <div class="redeem-content">
+                    <div class="input-redeem">
+                        <input type="checkbox">
+                    </div>
+                    <div class="redeem-opt">
+                        <h4>Redeem Gift Card?</h4>
+                    </div>
+                </div>
+                <div class="border-down"></div>
+            </div>
+
+                <div class="totals">
+                    <div class="subtotal_c">
+                        <div>Subtotal</div>
+                        <div id="total">0</div></div>
+    
+                    <div id="shiping_c">
+                        <div>Shipping</div>
+                        <div class="ships">Free</div>
+                    </div>
+                </div>
+
+                <div id="totl_inr_c" >
+                    <div class="total_c">Total</div>
+                    <div id="total1"></div>
+                </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+
+let data = JSON.parse(localStorage.getItem("cart"));
+
+let user = JSON.parse(localStorage.getItem("shippingData"));
+console.log(user);
+
+
+let total2=JSON.parse(localStorage.getItem('total'));
+console.log(total2);
+let price1=document.getElementById('total');
+price1.textContent=total2;
+
+let totalAmout=document.getElementById('total1');
+totalAmout.style.marginTop='20px';
+totalAmout.innerHTML=`INR ${total2}`;
+
+
+
+function getData(data){
+    console.log(data);
+
+    parent.innerHTML=''
+
+   data.forEach((el) => {
+
+
+    function randomInt(min,max){
+
+        return Math.floor(Math.random()*(max-min)+min);
+    }
+    
+    let result = randomInt(30,70);
+
+    let div = document.createElement("div");
+    div.setAttribute("class","checkoutDiv");
+
+    let cardDiv = document.createElement("div");
+    cardDiv.setAttribute("class","cardDiv");
+
+    let nameDiv = document.createElement("div");
+    nameDiv.setAttribute("class","nameDiv");
+
+    let amount = document.createElement("div");
+    amount.setAttribute("class","totalDiv");
+
+    let totalAmt = document.createElement("div");
+    totalAmt.setAttribute("class","totalamount");
+
+    let Image = document.createElement("img");
+    Image.src=el.image;
+
+    let name = document.createElement("p");
+    name.textContent=el.description;
+
+    let Price = document.createElement("P");
+    Price.textContent=`₹${el.price}`;
+
+    let offer = document.createElement("p");
+    offer.textContent=`${result}% Off`;
+    offer.style.color="crimson";
+
+    // let strikedOff = document.createElement("p");
+    // strikedOff.textContent=el.striked;
+
+    cardDiv.append(Image);
+    nameDiv.append(name);
+    amount.append(Price);
+    totalAmt.append(amount,offer);
+    div.append(cardDiv,nameDiv,totalAmt);
+    document.querySelector(".cart-product").append(div);
+   })
+
+
+}
+
+getData(data);
+
+
+function userData(data) {
+
+        let mail = document.querySelector(".email");
+        mail.textContent=data.Email;
+        
+        let country =document.querySelector(".country");
+        country.textContent=data.Country;
+
+        let fname =document.querySelector(".fname");
+        fname.textContent=data.Fname;
+
+        let lname =document.querySelector(".lname");
+        lname.textContent=data.Lname;
+
+        let phone =document.querySelector(".phone");
+        phone.textContent=data.Phone;
+
+        let pincode =document.querySelector(".pincode");
+        pincode.textContent=data.Pincode;
+
+        let state =document.querySelector(".state");
+        state.textContent=data.State;
+
+        let City =document.querySelector(".city");
+        City.textContent=data.city;
+        
+        let address =document.querySelector(".address1");
+        address.textContent=data.userAddress
+
+        let address_2 =document.querySelector(".address2");
+        address_2.textContent=data.userAddress2;
+
+}
+
+userData(user);
+
+
+</script>
+

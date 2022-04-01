@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/pay.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+ <div id="order-container">
+     <div class="left_p">
+       <div class="option-head">
+           <div class="back-option" onclick="backToPage()">
+              <div>
+                <i class="fas fa-arrow-left"></i>
+              </div>
+              <div class="backtopayment" onclick="window.location.href='payment.html'">
+                  <p>Back</p>
+              </div>
+           </div>
+           <div class="lifestyle">
+               <p>BoAt-lifestyle</p>
+           </div>
+       </div>
+
+       <div class="choose-pay">
+           <h2>Choose a payment Option</h2>
+       </div>
+
+       <div class="total-id">
+
+       </div>
+
+       <div class="sub-total">
+           <div class="sub-totat2"><p>Subtotal</p></div>
+           <div class="sub-total-1"></div>
+       </div>
+
+       <div class="sub-content">
+        Get upto Rs 500 Cashback when you pay using LazyPay on PayU Payment Gateway. Valid once on min transaction of Rs 200.
+       </div>
+     </div>
+     
+
+
+     <div class="right_p">
+
+        <div class="check-payment">
+
+        </div>
+     
+        <div class="right-1">
+            <div class="right1-inner"><p>PAYMENT OPTIONS</p></div>
+        </div>
+
+        <div class="right-pay-methods">
+             
+             <div class="pay-main">
+                 <div class="pay1">
+                 <div class="pay-icon">
+                    <i class="fas fa-credit-card"></i>
+                 </div>
+                 <div class="pay-content">
+                     <p>Cards (Credit/Debit)</p>
+                     <p class="pay-cards">Visa, Mastered, Diners, Club, Rupay, Amex</p>
+                 </div>
+                </div>
+                 <div class="pay-icon2" onclick="cards()">
+                    <i class="fas fa-angle-right"></i>
+                 </div>
+             </div>
+ 
+             <div class="border-down"></div>
+
+             <div class="pay-main">
+                <div class="pay1">
+                <div class="pay-icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="pay-content">
+                    <p>Wallet</p>
+                    <p class="pay-cards">Amazon Pay, Paytm, Phonepe & more</p>
+                </div>
+               </div>
+                <div class="pay-icon2">
+                   <i class="fas fa-angle-right" onclick="wallet()"></i>
+                </div>
+            </div>
+
+            <div class="border-down"></div>
+            
+            <div class="pay-main">
+                <div class="pay1">
+                <div class="pay-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="pay-content1">
+                    <p>Net Banking</p>
+                    <p class="pay-cards">All Indian Banks</p>
+                </div>
+               </div>
+                <div class="pay-icon2">
+                   <i class="fas fa-angle-right" onclick="Netbanking()"></i>
+                </div>
+            </div>
+
+            <div class="border-down"></div>
+
+            <div class="pay-main">
+                <div class="pay1">
+                <div class="pay-icon">
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="pay-content1">
+                    <p>UPI</p>
+                    <p class="pay-cards">Gpay,Phonepe,Paytm,BHIM</p>
+                </div>
+               </div>
+                <div class="pay-icon2">
+                   <i class="fas fa-angle-right" onclick="UPI()"></i>
+                </div>
+            </div>
+
+            <div class="border-down"></div>
+
+            <div class="pay-main">
+                <div class="pay1">
+                <div class="pay-icon">
+                   <img src="https://api.payu.in/public/assets/images/cardless.svg" alt="">
+                </div>
+                <div class="pay-content1">
+                    <p>EMI</p>
+                    <p class="pay-cards">Cardless EMI</p>
+                </div>
+               </div>
+                <div class="pay-icon2">
+                   <i class="fas fa-angle-right" onclick="EMI()"></i>
+                </div>
+            </div>
+
+            <div class="border-down"></div>
+
+            <div class="pay-main">
+                <div class="pay1">
+                <div class="pay-icon">
+                   <img src="https://api.payu.in/public/assets/images/wallet-logos/paytm.svg" alt="">
+                </div>
+                <div class="pay-content1">
+                    <p>Paytm</p>
+                </div>
+               </div>
+                <div class="pay-icon2">
+                   <i class="fas fa-angle-right" onclick="paytm()"></i>
+                </div>
+            </div>
+
+           <div class="side-payment-container">
+               <div class="side1-container">
+                  <div class="card-details">
+                      <p>CARDS (CREDIT/DEBIT)</p>
+                  </div>
+                   <form action="">
+                       <p>New Card</p>
+                       <input type="text" placeholder="Enter Card Number" id="cardnumber"minlength="12"><br>
+                       <div class="month-cvv">
+                           <div class="month">
+                            <p>Expiry</p>
+                            <input type="text" placeholder="MM/YY" id="expiry" maxlength="5">
+                           </div>
+                           <div class="cvv">
+                            <p>CVV</p>
+                            <input type="text" placeholder="Enter CVV" id="expiry-cvv" maxlength="3">
+                           </div>
+                       </div>
+                       <p>Name on Card</p>
+                       <input type="text" placeholder="Enter name as on card" id="holder"><br>
+                       <div class="checkbox1">
+                           <div class="checkbox2">
+                            <input type="checkbox" id="checkbox">
+                           </div>
+                           <div class="check-content">
+                            <p>Save this option securely for faster payment</p>
+                           </div>
+                       </div>
+
+                       <div class="proceed">
+                           <button class="procd-btn" onclick="proceed()">proceed</button>
+                       </div>
+                       
+                   </form>
+               </div>
+           </div>
+
+
+           <div class="side-wallet-container">
+            <p>WALLETS</p>
+            <div class="wallet">
+               <div class="walletimage">
+                   <img src="https://api.payu.in/public/assets/images/wallet-logos/amon.svg" alt="">
+               </div>
+               <div class="walletname" onclick="window.location.href='otp.html'">
+                   <p>Airtel Money</p>
+               </div>
+               <div class="walleticon">
+                <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+               </div>
+            </div>
+            <div class="border-down1"></div>
+
+            <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/wallet-logos/frec.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>Freecharge PayLater | UPI | Wallet</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/wallet-logos/payz.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>HDFC Bank</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/wallet-logos/jiom.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>Jio Money</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/wallet-logos/phonepe.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>PhonePe/BHIM UPI</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+        </div> 
+
+        <div class="side-net-container">
+            <p>BANKS</p>
+            <div class="wallet">
+               <div class="walletimage">
+                   <img src="https://api.payu.in/public/assets/images/bank-logos/hdfb.svg" alt="">
+               </div>
+               <div class="walletname" onclick="window.location.href='otp.html'">
+                   <p>HDFC BANK</p>
+               </div>
+               <div class="walleticon">
+                <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+               </div>
+            </div>
+            <div class="border-down1"></div>
+
+            <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/bank-logos/icib.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>ICICI Bank</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/bank-logos/sbib.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>State Bank of India</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/bank-logos/162b.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>Kotak Mahindra Bank</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/bank-logos/airnb.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>Airtel Payments Bank</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+        </div> 
+
+
+        <div class="side-UPI-container">
+            <p>BANKS</p>
+            <div class="wallet">
+               <div class="walletimage">
+                   <img src="https://api.payu.in/public/assets/images/upi-logos/upi2/Gpay.svg" alt="">
+               </div>
+               <div class="walletname" onclick="window.location.href='otp.html'">
+                   <p>Google Pay</p>
+               </div>
+               <div class="walleticon">
+                <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+               </div>
+            </div>
+            <div class="border-down1"></div>
+
+            <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/upi-logos/upi2/PhonePe.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>PhonePe</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/upi-logos/upi2/Bhim.svg" alt="">
+                </div>
+                <div class="walletname"onclick="window.location.href='otp.html'">
+                    <p>BHIM</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/upi-logos/upi2/Paytm.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>Paytm</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+
+             <div class="wallet">
+                <div class="walletimage">
+                    <img src="https://api.payu.in/public/assets/images/upi-logos/upi2/amazonpay.svg" alt="">
+                </div>
+                <div class="walletname" onclick="window.location.href='otp.html'">
+                    <p>Amazon Pay</p>
+                </div>
+                <div class="walleticon">
+                 <i class="fas fa-angle-right" onclick="window.location.href='otp.html'"></i>
+                </div>
+             </div>
+             <div class="border-down1"></div>
+        </div> 
+
+
+        </div>
+    
+
+     </div>
+ </div>
+
+</body>
+</html>
+
+<script>
+
+let total = JSON.parse(localStorage.getItem('total'))
+
+let showTotal = document.querySelector(".sub-total-1");
+showTotal.textContent=`₹${total}`
+
+let Total = document.querySelector(".total-id");
+Total.textContent=`Total Payable Amount ₹${total}`
+
+let container =  document.querySelector(".side-payment-container");
+let container1 = document.querySelector(".side-wallet-container");
+let container2 = document.querySelector(".side-net-container");
+let container3 =document.querySelector(".side-UPI-container");
+
+
+function cards(){
+    container.classList.add("active");
+    
+}
+
+function backToPage(){
+   container.classList.remove("active");
+   container1.classList.remove("active");
+   container2.classList.remove("active");
+   container3.classList.remove("active");
+}
+
+function wallet(){
+    container1.classList.add("active");   
+}
+
+function Netbanking(){
+    container2.classList.add("active");
+}
+
+function UPI(){
+    container3.classList.add("active");
+}
+
+
+
+function proceed(){
+   
+    let cardnumber = document.querySelector("#cardnumber").value;
+    let date = document.querySelector("#expiry").value;
+    let cvv = document.querySelector("#expiry-cvv").value;
+    let holder = document.querySelector("#holder").value;
+
+
+    if(cardnumber==""||date==''||cvv==""||holder==''){
+        alert("please enter the details");
+    }
+    else{
+
+
+       const cardDetails = {
+
+         cardNumber:cardnumber,
+         cardDate:date,
+         CVV:cvv,
+         Holder:holder
+       }
+       localStorage.setItem("cardData",JSON.stringify(cardDetails));
+       window.location.href="otp.html"
+    }
+}
+
+
+</script>

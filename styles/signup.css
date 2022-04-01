@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+  body{
+      margin:0;
+      padding:0;
+      background-color: white;
+      color:black;
+  }
+ #footer-main-container{
+    background: black;
+    color:white;
+}
+.footer-row4 h3{
+    color:white;
+}
+.signup-form{
+   width:80%;
+   margin:auto;
+   margin-top:1%;
+}
+.signup-head{
+    text-align: center;
+    font-size:30px;
+    font-weight: bold;
+}
+#form{
+    width:50%;
+    margin:auto;
+    padding:5%;
+    margin-left:30%;
+    margin-top:-2%;
+}
+#form p{
+    line-height: 1px;
+    font-size:20px;
+}
+#form input{
+    width:350px;
+    padding:1.8%;
+    margin-bottom:3%;
+    border:0;
+}
+#name,#lastname,#Email,#pass{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#form input[type=submit]{
+    width:350px;
+    background: #ff0000;
+    border-radius: 5px;
+    color:white;
+    font-weight: bold;
+}
+.signup-icons{
+    text-align: center;
+    margin-top:3%;
+    font-size: 35px;
+}
+.facebook{
+    color:#3b5998;
+}
+.signup-icons>.google{
+    color:black;
+}
+.login-details{
+    font-size: 14.5px;
+}

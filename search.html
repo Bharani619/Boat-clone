@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="Home-container">
+
+       <nav>
+           <div id="nav-bar"></div>
+       </nav>
+
+<section>
+   <div class="search-head">
+
+   </div>
+   
+   <div class="sort-flex">
+    <div class="sort-head">
+        <p>SORT BY</p>
+    </div>
+   <div id="sort-buttons">
+       <select id="sort-lh-sort-hl" onchange="sort()">
+           <option value="">Featured</option>
+           <option value="low">Low to High</option>
+           <option value="high">High to Low</option>
+       </select>
+   </div>
+</div>
+
+<!-- <div class="count-container">
+    <div class="category-container">
+
+    </div>
+    <div class="count">
+  
+    </div>
+</div> -->
+
+    <div id="search-container">
+
+       <div class="left-container">
+           <div class="filter-container">
+               <div class="inner-content">
+                   <h3>Filter by</h3>
+               </div>
+               <div class="inner-content-2">
+                   <p>Reset</p>
+               </div>
+           </div>
+           <div class="filter-container">
+               <div class="inner-content-1">
+                   <p>Price</p>
+               </div>
+               <div class="inner-content-2">
+                <i class="fas fa-angle-down"></i>
+               </div>
+           </div>
+           <div class="filter-container">
+            <div class="inner-content-1">
+                <p>Colors</p>
+            </div>
+            <div class="inner-content-2">
+             <i class="fas fa-angle-down"></i>
+            </div>
+           </div>
+           <div class="filter-container">
+            <div class="inner-content-1">
+                <p>Category</p>
+            </div>
+            <div class="inner-content-2">
+             <span class="clear-content">clear <i class="fas fa-angle-down"></i></span>
+            </div>
+           </div>
+           <div class="filter-container">
+            <div class="inner-content-1">
+                <p>Earphone Type</p>
+            </div>
+            <div class="inner-content-2">
+             <i class="fas fa-angle-down"></i>
+            </div>
+           </div>
+           <div class="filter-container">
+            <div class="inner-content-1">
+                <p>Availability</p>
+            </div>
+            <div class="inner-content-2">
+             <i class="fas fa-angle-down"></i>
+            </div>
+           </div>
+
+       </div>
+       <div class="right-container">
+       </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <div id="footer"></div>
+</footer>
+
+</div>
+
+<section class="sidebar-main">
+    <div class="sibebar-container">
+        <div class="sidebar-head">
+            <p>Free shipping | COD available on orders above $3000</p>
+        </div>
+        <div class="side-btn-content">
+            <div class="side-btn">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            
+            <div class="cart-count"></div>
+        </div>
+        <div class="sidebar-prod-container">
+                 
+        </div>
+        <div class="divide-line"></div>
+        <div class="lower-container">
+             <div class="promo-tag">
+                 <h4>PROMO CODE</h4>
+             </div>
+             <div class="promo-content">
+                 <input type="text" placeholder="Enter Coupon Code" id="promoInput"> 
+                 <button class="apply-btn">Apply</button>
+             </div>
+             <div class="subtotal">
+                 <p>Subtotal:</p>
+                 <p class="total-price"></p>
+             </div>
+             <div class="shipping-cart">
+                <p>Shipping:</p>
+                <p>FREE</p>
+            </div>
+            <div class="block-line">
+                <p>Or 30 interest-free payment 0f $4165 with<span><img src="https://assets.zestmoney.in/assets/widget/zest-logo-name-info.svg" alt=""></span></p>
+            </div>
+            <div class="cart-payment">
+                <div class="btn-upi">
+                    <button onclick="window.location.href='checkout.html'">Pay Via UPI</button>
+                </div>
+                <div class="btn-card">
+                    <button onclick="window.location.href='checkout.html'">Pay Via Card</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+<script src="scripts/searchData.js"></script>
+<script type="module">
+    
+import navbar from "./components/nav.js";
+
+import footer from "./components/footer.js";
+
+import {retriveData,appendData} from "./scripts/cart.js";
+
+import {getData,renderData} from "./scripts/DynamicFunc.js";
+
+let Navbar = document.getElementById("nav-bar");
+Navbar.innerHTML=navbar();
+
+let Footer = document.querySelector("#footer");
+ Footer.innerHTML=footer();
+
+
+let results = document.querySelector(".right-container");
+
+let cart_btn = document.querySelector(".nav-cart-btn");
+let cart = document.querySelector(".sidebar-main");
+let cart_back = document.querySelector(".side-btn");
+let Homecontainer = document.querySelector("#Home-container");
+
+    
+cart_btn.onclick = ()=> {
+    Homecontainer.setAttribute("class","activeOnblur")
+    cart.classList.add("active");
+}
+
+cart_back.onclick =()=> {
+    Homecontainer.setAttribute("class","activeofblur")
+    cart.classList.remove("active");
+}
+
+
+
+let product = JSON.parse(localStorage.getItem("Allproducts"));
+let value = document.getElementById("searchInput");
+value.addEventListener('keypress',searchFunction);
+
+function searchFunction (event) {
+
+  if(event.key=="Enter"){
+
+    window.location.href="search.html"
+
+    let searchvalue = document.getElementById("searchInput").value;
+    
+    let  searchArr = [];
+
+    for(let i=0; i<product.length; i++){
+        // var count = 0;
+        // var str = ''
+        if(searchvalue===product[i].category){
+           searchArr.push(product[i]);
+        //    count++;
+        //    str=product[i].category;
+        }
+        // document.querySelector(".category-container").innerHTML=str;
+        // document.querySelector(".count").innerHTML=count;
+    }
+    if(searchArr==''){
+        document.querySelector(".search-head").innerHTML="NO RESULTS FOUND"   
+    }
+
+    localStorage.setItem("search",JSON.stringify(searchArr));
+  }
+  
+}
+
+let searchData = JSON.parse(localStorage.getItem("search"));
+
+const displayData = (data)=> {
+
+parent.innerHTML=""
+
+    data.forEach((el)=> {
+
+        const {description,image,price,striked} = el
+        
+        let div =document.createElement("div");
+        div.setAttribute("class","mainDiv")
+  
+        let imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class","imgDiv")
+        imgDiv.onclick=()=>{
+        localStorage.setItem("single-elem",JSON.stringify(el));
+        window.location.href='description.html'
+    }
+  
+        let contentDiv = document.createElement("div");
+        contentDiv.setAttribute("class","contentDiv")
+
+        let ratingcontainer = document.createElement("div");
+        ratingcontainer.setAttribute("class","ratingDiv");
+
+        let costDiv = document.createElement("div");
+        costDiv.setAttribute("class","costDiv");
+        
+        let Image = document.createElement("img");
+        Image.src = image;
+        Image.setAttribute("width","100%");
+        Image.setAttribute("height","100%");
+        
+        let title = document.createElement("p");
+        title.setAttribute('class','titleDiv');
+        title.textContent=description;
+  
+        let Price = document.createElement("p");
+        Price.setAttribute("class","priceDiv")
+        Price.textContent="Rs."+price;
+
+        let strikedOff = document.createElement("p");
+        strikedOff.setAttribute("class","striked")
+        strikedOff.textContent="Rs."+striked;
+
+        let rating1 = document.createElement("i");
+        rating1.innerHTML=`<i class="fas fa-star"></i>`
+      
+        let rating2 = document.createElement("i");
+        rating2.innerHTML=`<i class="fas fa-star"></i>`
+      
+        let rating3 = document.createElement("i");
+        rating3.innerHTML=`<i class="fas fa-star"></i>`
+
+        let rating4 = document.createElement("i");
+        rating4.innerHTML=`<i class="fas fa-star"></i>`
+        
+
+        costDiv.append(Price,strikedOff);
+        ratingcontainer.append(rating1,rating2,rating3,rating4);
+        imgDiv.append(Image);
+        contentDiv.append(ratingcontainer,title,costDiv);
+        div.append(imgDiv,contentDiv);
+        results.append(div)
+  
+      });
+}
+
+displayData(searchData);
+
+</script>
